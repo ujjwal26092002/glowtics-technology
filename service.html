@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICES</title>
+    <style>
+       
+        /* navbar */
+        *{
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        .navbar ul li a:hover{
+            background-color: rgb(242, 174, 228);
+            color: rgb(16, 16, 55);
+        }
+        
+        .container{
+            position: relative;
+        }
+        #active{ 
+            background-color: rgb(242, 174, 228);
+            color: rgb(16, 16, 55);
+        }
+       
+        #my-vid{
+            
+            margin-top: 11vh;
+            top: 0;
+            left: 0;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            /* pointer-events: none; */
+            /* z-index: -1; */
+        } 
+        .navbar{
+            height: 10vh;
+            width: 100%;
+            position: fixed;
+            top: 0px;
+            display: flex;
+            justify-content: space-between;
+           
+            background: linear-gradient(to right,pink,purple);
+            
+            box-shadow: 2px 2px 3px rgb(127, 125, 125);
+            z-index: 2;
+           
+        }
+        .heading{
+            font-size: 2rem;
+        }
+        .navbar p{
+            line-height: 10vh;
+            margin-left: 20px;
+            margin-right: 5vw;
+            color: rgb(16, 16, 55);
+            font-style: normal;
+           font-family: 'Times New Roman', Times, serif;
+
+        }
+        .contact{
+            position: absolute;
+            margin-left: 10px;
+            
+        }
+
+        .navbar ul{
+            display: flex;
+            
+        }
+        .navbar ul li{
+            list-style: none;
+            
+        }
+       
+        .navbar ul li a{
+            text-decoration: none;
+            line-height: 10vh;
+            padding: 10px;
+            margin-right: 20px;
+            color: rgb(16, 16, 55);
+            
+            
+        }
+        #checkbox{
+            display: none;
+        }
+        #checkbtn{
+            display: none;
+            line-height: 10vh;
+            margin-left: 5vw; 
+          
+            color: rgb(16, 16, 55);
+            font-size: 25px;
+        }
+        #checkbox:checked ~ ul{
+           
+            top: 10vh;
+            left: 0px;
+            
+        }
+       
+        @media screen and (max-width:900px) {
+            .navbar ul li{
+                display: none;
+            }
+            
+            #checkbtn{
+                display: block;
+            }
+            
+            .navbar ul {
+                
+                height: 90vh;
+                width: 100%;
+                position: fixed;
+                color: rgb(16, 16, 55);
+                background: linear-gradient(to right,pink,purple);
+                left: -100%;
+                transition: .5s;
+                display: flex;
+                flex-direction: column;
+               justify-content: center;
+                
+            }
+            
+            .navbar ul li{
+               
+                display: block;
+                text-align: center;
+                
+        
+        
+            }
+           
+            
+            
+        }
+        .icons{
+            line-height: 10vh;
+            padding: 10px;
+            
+        }
+        .book{
+            line-height: 10vh;
+            color: rgb(16, 16, 55);
+        }
+        .logo{
+            line-height: 10vh;            
+            font-family: 'Times New Roman', Times, serif;
+            
+            
+        }
+        hr{
+            height: 1px;
+            width: 100%;
+            color: rgb(16, 16, 55);
+            
+        }
+        .links{
+            color: rgb(16, 16, 55);
+        }
+       
+       
+            /* content */
+
+            .content{
+                margin-top: 20vh;
+            }
+        .theading{
+            margin-top: 5vh;
+            text-align: center;
+            font-size: 2rem;
+            font-style: normal;
+            font-family: 'Times New Roman', Times, serif;
+            
+            color: rgb(16, 16, 55);
+        }
+        .ser{
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid;
+            width: 80%;
+            flex-direction: column;
+            margin-bottom: 5vh;            
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 rgba(186, 85, 211, 0);
+            border: 2px solid #98b7f5; /* Set your desired border color */
+            animation: glow 2s infinite alternate; /* Adjust the duration as needed */
+        }
+        .ser:hover{
+        
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.05); 
+        
+       }
+       .ser:hover {
+                box-shadow: 0 0 10px 5px rgba(78, 142, 165, 0.8); /* Adjust the color and size of the glow */
+            }
+        .serimg{
+            width: 40%;
+            height: 50vh;
+            margin: 2vw;
+        }
+        .serpara{
+            width: 90%;
+            /* height: 50vh; */
+            margin: 2vw;
+            color: rgb(16, 16, 55);
+            font-style: normal;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+           
+            
+        }
+        .seri{
+            width: 100%;
+            height: 100%;
+        }
+        .option{
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 2vh;
+            color: rgb(16, 16, 55);
+        }
+        .benifit{
+            border: 2px solid;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2vh;
+            border: 2px solid #98b7f5; /* Set your desired border color */
+            animation: glow 2s infinite alternate; /* Adjust the duration as needed */
+            border-radius: 10px;
+        }
+        .benifitp{
+            margin: 2vw;
+            color: rgb(16, 16, 55);
+        }
+        .benifit:hover{
+        
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.05); 
+        
+       }
+       .benifit:hover {
+                box-shadow: 0 0 10px 5px rgba(78, 142, 165, 0.8); /* Adjust the color and size of the glow */
+            }
+        .book{
+            
+           margin-left: 2vw;
+           
+        }   
+          
+        
+        .booklink{
+            color: rgb(16, 16, 55);
+            text-decoration: none;
+            border: 2px solid #98b7f5;
+            font-style: normal;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+        .booklink:hover{
+            
+            box-shadow: 0 0 10px 5px rgba(78, 142, 165, 0.8);
+        }
+        @media screen and (max-width:1000px) {
+            .theading{
+                font-size: 1.5rem;
+            }
+            
+        }
+        @media screen and (max-width:700px) {
+            .theading{
+                font-size: 1.2rem;
+            }
+            .heading{
+                font-size: 1.5rem;
+            }
+            
+        }
+        @media screen and (max-width:500px) {
+            .theading{
+                font-size: 1rem;
+            }
+            .heading{
+                font-size: 1.3rem;
+            }
+            
+        }
+
+        /* footer */
+
+ /* footer */
+.footer{
+        /* background-color:  rgb(29, 29, 47); */
+        background: linear-gradient(to right,pink,purple);
+        height:50vh;
+        width: 100%;
+        margin-top: 10vh;
+    }
+    .footercon{
+        color: rgb(16, 16, 55);
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4vh;
+        text-align: center;
+    }
+    .linksfooter{
+        padding: 5vh;
+        display: flex;
+        justify-content: center;
+       
+    }
+    .footerli{
+        color: rgb(16, 16, 55);
+        padding-inline: 5vw;
+       text-decoration: none;
+       font-size: 1rem;
+    }
+    .footerhr{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .symlinks{
+        margin-right: auto;
+        margin-left: auto;
+        width: 15%;
+        color: rgb(16, 16, 55);
+        justify-content: space-between;
+        display: flex;
+        margin-top: 10vh;
+        font-size: 4vh;       
+    }
+   
+    @media screen and (max-width:900px) {
+        .footercon{
+            width: 80%;
+            font-size: 1rem; 
+        }
+        .footerli{
+            padding-inline: 3vw; 
+            font-size: 1rem; 
+        }
+        .footerhr{
+            width: 90%;
+        }
+        .symlinks{
+            width: 30%;
+            font-size: 3vh;
+            margin-top: 5vh;
+        }
+    }
+    @media screen and (max-width:500px) {
+        .footercon{
+            width: 90%;
+            font-size: .6rem; 
+        }
+        .footerli{
+            padding-inline: 2vw; 
+            font-size: .6rem; 
+        }
+        .footerhr{
+            width: 90%;
+        }
+        .symlinks{
+            width: 30%;
+            font-size: 2vh;
+            margin-top: 5vh;
+        }
+        .footer{
+            height: 40vh;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <video class="vid" id="my-vid" autoplay loop muted>
+            <source src="vid2.mp4" type="video/mp4" class="my-vid1">
+        </video>
+        <div class="navbar">                
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" id="checkbtn" ><i class="fa-solid fa-bars"></i></label>
+        <p class="heading">GLOWTICS TECHNOLOGY</p>                                             
+        <ul>                
+
+        <li><a href="index.html" class="links" ><i class="fa-solid fa-house"></i>HOME</a></li>
+        <li><a href="about.html" class="links" id="active">SERVICES</a></li>
+        <li><a href="book.html" class="links">CONTACT</a></li>
+        <li><a href="in.html" class="book">ADMIN</a></li>                
+        </ul>
+
+    </div>
+    <div class="content">
+
+                    <!-- gst -->
+
+        
+   
+        <div class="ser">
+            <div class="theading">
+                <p>GST</p> 
+             </div>
+            
+            <div class="serpara">
+               <b> Our GST Services:</b><br><br><br>
+
+                1) GST Registration:<br>
+
+                We assist in the seamless registration process to ensure your business is compliant with GST regulations.<br><br>
+
+                2)Consultation:<br>
+
+                Our expert consultants provide personalized advice tailored to your industry, helping you optimize your GST strategy.<br><br>
+                3)Filing and Compliance:<br>
+
+                Stay stress-free with our efficient filing services. We ensure that your returns are filed accurately and on time, avoiding penalties and legal hassles.<br><br>
+                4)Input Tax Credit Optimization:<br>
+
+                Maximize your benefits by strategically claiming input tax credits, reducing your overall tax liability.?<br>
+            </div>
+
+            <div class="book">
+                <div class="proceed">
+                    <p>
+                       <a href="book.html" class="booklink">Contact Us</a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+                    <!-- income tax -->
+                    
+       
+   
+        <div class="ser">
+            <div class="theading">
+                <p>INCOME TAX</p> 
+             </div>
+            
+            <div class="serpara">
+            <b>Our Income Tax Services:</b><br><br><br>
+
+                1)Income Tax Filing:<br>
+
+                Simplify your tax filing process with our expert assistance. We ensure accuracy and timely filing to avoid penalties.<br><br>
+                2)Tax Planning:<br>
+
+                xStrategize your finances with our personalized tax planning services. Optimize your tax liability while adhering to legal regulations.<br><br>
+                2)Consultation:<br>
+
+                Our experienced consultants are ready to provide insights into the latest tax laws, helping you make informed financial decisions.<br><br>
+                4)Business Taxation:<br>
+
+                Navigate business taxation seamlessly with our specialized services. From corporate tax returns to compliance, we've got you covered.<br><br>
+            </div>
+            <div class="book">
+                <div class="proceed">
+                    <p>
+                       <a href="book.html" class="booklink">Contact Us</a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+                    <!-- INSURANCE -->
+                    
+        
+        <div class="ser">
+            <div class="theading">
+                <p>INSURANCE</p> 
+             </div>
+        
+            
+            <div class="serpara">
+                <b>Our Insurance Services:</b><br><br><br>
+
+                1)Personal Insurance:<br>
+
+                Safeguard your home, car, and valuable possessions with our comprehensive personal insurance plans. Enjoy the confidence that comes with knowing you're protected.<br><br>
+                2)Life Insurance:<br>
+
+                Plan for the future and protect your loved ones with our life insurance solutions. Ensure financial security and peace of mind for the ones you care about.<br><br>
+                3)Business Insurance:<br>
+
+                Mitigate risks and secure the continuity of your business with our tailored business insurance plans. From property insurance to liability coverage, 
+                we've got your business covered.<br><br>
+                4)Health Insurance:<br>
+
+                Prioritize your well-being with our health insurance options. Access quality healthcare without the financial burden.<br><br>
+
+            </div>
+            <div class="book">
+                <div class="proceed">
+                    <p>
+                       <a href="book.html" class="booklink">Contact Us</a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+                    <!-- LICENSE-->
+                    
+       
+   
+        <div class="ser">
+            <div class="theading">
+                <p>LICENSE</p> 
+             </div>
+            
+            <div class="serpara">
+                <b>Our Licensing Services:</b><br><br><br>
+
+                1)Business Licensing:<br>
+
+                Navigate the maze of business regulations seamlessly with our business licensing services. Stay compliant and focus on what matters—growing your business.<br><br>
+                2)Professional Licensing:<br>
+
+                Whether you're an individual or a professional entity, our services cover a range of professional licensing needs. Trust us to handle the complexities, 
+                leaving you with peace of mind.<br><br>
+                3)Industry-Specific Licensing:<br>
+
+                From healthcare to finance, we specialize in industry-specific licensing solutions. Our team understands the nuances of various sectors to provide targeted and
+                effective licensing support.<br><br>
+                4)Renewals and Compliance Checks:<br>
+
+                Ensure your licenses are always up-to-date with our renewal and compliance check services. We'll proactively manage your renewals, so you can stay focused on your core 
+                business activities.<br><br>
+            </div>
+            <div class="book">
+                <div class="proceed">
+                    <p>
+                       <a href="book.html" class="booklink">Contact Us</a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+                    <!-- TAX PLANNING -->
+                    
+        
+        <div class="ser">
+            <div class="theading">
+                <p>TAX PLANNING</p> 
+             </div>
+        
+            
+            <div class="serpara">
+            <b>Our Tax Planning Services:</b><br><br><br>
+
+                1)Personalized Strategies:<br>
+
+                Benefit from personalized tax strategies tailored to your unique financial situation. Our experts work closely with you to understand your goals
+                 and implement strategies that align with your objectives.<br><br>
+                2)Proactive Compliance:<br>
+
+                Stay ahead of changing tax laws with our proactive compliance approach. We monitor legislative updates to ensure your tax plan remains current and effective.<br><br>
+                3)Income Optimization:<br>
+
+                Explore opportunities for income optimization within the bounds of tax regulations. Our goal is to help you retain more of your hard-earned money.<br><br>
+                4)Holistic Financial Planning:<br>
+
+                Integrate tax planning seamlessly into your overall financial strategy. Our holistic approach ensures that your tax plan complements your broader financial goals.<br><br>
+            </div>
+            <div class="book">
+                <div class="proceed">
+                    <p>
+                       <a href="book.html" class="booklink">Contact Us</a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+                    <!-- INVESTMENT PLANNING -->
+                    
+       
+   
+        <div class="ser">
+            <div class="theading">
+                <p>INVESTMENT PLANNING </p> 
+             </div>
+            <div class="serpara">
+            <b>Our Investment Planning Services:</b><br><br><br>
+
+                1)Tailored Strategies:<br>
+
+                Benefit from custom-tailored investment strategies that consider your risk tolerance, financial objectives, and timeline. Your financial goals guide our approach.<br><br>
+                2)Diverse Investment Options:<br>
+
+                Explore a range of investment options curated to suit your preferences and objectives. From traditional investments to cutting-edge opportunities, we offer 
+                a diverse portfolio.<br><br>
+                3)Risk Management:<br>
+
+                Mitigate risks effectively with our comprehensive risk management strategies. We prioritize preserving and growing your wealth while safeguarding against market
+                fluctuations.<br><br>
+                4)Ongoing Portfolio Monitoring:<br>
+
+                Enjoy peace of mind with our ongoing portfolio monitoring. We keep a vigilant eye on your investments, making adjustments as needed to align with your evolving
+                financial landscape.<br><br>
+            </div>
+            <div class="book">
+                <div class="proceed">
+                    <p>
+                       <a href="book.html" class="booklink">Contact Us</a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+                    <!-- FINTECH -->
+                    
+        
+   
+        <div class="ser">
+            
+            <div class="theading">
+                <p>FINTECH</p> 
+             </div>
+            <div class="serpara">
+            <b>Our Fintech Solutions:</b><br><br><br>
+
+                1)Digital Transactions:<br>
+
+                Seamlessly manage your finances with our user-friendly digital transaction tools. Experience the convenience of secure and swift money transfers.<br><br>
+                2)Financial Analytics:<br>
+
+                Gain deeper insights into your financial health with our advanced financial analytics tools. Empower yourself with data-driven decision-making.<br><br>
+                3)Mobile Banking:<br>
+
+                Access your accounts anytime, anywhere with our intuitive mobile banking solutions. Stay in control of your finances on the go.<br><br>
+                3)Innovative Financial Tools:<br>
+
+                Explore a suite of innovative financial tools designed to enhance your financial control. From budgeting to investment tracking, our fintech solutions have you
+                 covered.<br><br>
+            </div>
+            <div class="book">
+                <div class="proceed">
+                    <p>
+                       <a href="book.html" class="booklink">Contact Us</a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+                    <!-- TRAVEL PLANNING-->
+                    
+       
+   
+        <div class="ser">
+            <div class="theading">
+                <p>TRAVEL PLANNING</p> 
+             </div>
+            
+            <div class="serpara">
+            <b>Our Travel Planning Services:</b><br><br><br>
+
+                Curated Itineraries:<br>
+
+                Experience personalized travel adventures with our expertly crafted itineraries. Every detail is considered, ensuring a tailored and memorable journey.<br><br>
+                Accommodation Expertise:<br>
+
+                Discover the perfect accommodations for your travels. Our experts find options that suit your preferences and budget.<br><br>
+                Seamless Bookings:<br>
+
+                Enjoy hassle-free travel with our seamless booking services. From flights to activities, we handle all the details for you.<br><br>
+                Personalized Experiences:<br>
+
+                Make your journey uniquely yours with our personalized experiences. We go beyond the ordinary to create exceptional travel memories.<br><br>
+            </div>
+            <div class="book">
+                <div class="proceed">
+                    <p>
+                       <a href="book.html" class="booklink">Contact Us</a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+
+        <div class="benifit">
+            <div class="option">
+                WHY TO CHOOSE GLOWTICS TECHNOLOGY PVT LMT
+            </div>
+            
+            <div class="benifitp">
+                    1)<b>GST Services:</b><br>
+
+                    Simplified compliance and registration.<br>
+                    Proactive updates and accurate filing.<br>
+                    Tailored solutions for businesses of all sizes.<br><br>
+
+                    2)<b>Income Tax Solutions:</b><br>
+
+                    Expert advice and personalized strategies.<br>
+                    Timely and compliant income tax filing.<br>
+                    Secure your financial success effortlessly.<br><br>
+
+                    3)<b>Insurance Expertise:</b><br>
+
+                    Comprehensive coverage for individuals and businesses.<br>
+                    Tailored plans and expert guidance.<br>
+                    A commitment to your peace of mind.<br><br>
+
+                   4)<b>Tax Planning:</b><br>
+
+                    Strategic tax planning for financial optimization.<br>
+                    Personalized strategies aligned with your goals.<br>
+                    Integration into overall financial planning.<br>
+                    Ensure maximum savings and compliance.<br><br>
+
+                    5)<b>Investment Planning:</b><br>
+
+                    Confident and informed investment decisions.<br>
+                    Personalized strategies and diverse investment options.<br>
+                    Ongoing portfolio monitoring for financial prosperity.<br><br>
+
+                    6)<b>Fintech Solutions:</b><br>
+
+                    Cutting-edge tools for seamless transactions.<br>
+                    Advanced financial analytics for data-driven decisions.<br>
+                    Elevate your financial experience with technology.<br><br>
+
+                    7)<b>Travel Planning:</b><br>
+
+                    Crafting unforgettable journeys with expertise.<br>
+                    Curated itineraries and personalized experiences.<br>
+                    Turn your travel dreams into reality effortlessly.<br><br>
+
+                   8)<b>license Services:</b><br>
+
+                    Streamlined business licensing processes.<br>
+                    Professional licensing support for individuals and entities.<br><br>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- footer -->
+
+<div class="footer">
+    <div class="linksfooter">
+           <a href="about.html" class="footerli">ABOUT </a>
+           <a href="services.html" class="footerli">SERVICES</a>
+           <a href="rooms.html" class="footerli">CONTACT</a>
+           <a href="dining.html" class="footerli">ADMIN</a>
+           
+   </div>
+   <hr class="footerhr">
+   <p class="footercon">
+    Welcome to Financial Harmony: Elevate Your Prosperity with Our Comprehensive Services! From Income Tax to GST, Licenses, and Beyond, 
+    We're Your Trusted Partner in Navigating the Complexities of Financial Compliance. Experience Seamless Solutions,
+     Empowering Your Business for Success in Every Fiscal Endeavor!
+   </p>
+   <div class="symlinks">
+       <i class="fa-brands fa-twitter" class="sym"></i>
+       <i class="fa-brands fa-instagram" class="sym"></i>
+       <i class="fa-brands fa-facebook" class="sym"></i>
+       <i class="fa-brands fa-whatsapp" class="sym"></i>
+       <i class="fa-solid fa-location-dot" class="sym"></i>
+   </div>
+   <p class="footercon">
+       <i class="fa-regular fa-copyright"></i> copyright : uskgroup.com
+   </p>
+</div>
+
+</body>
+</html>
+</body>
+</html>

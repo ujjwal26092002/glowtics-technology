@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>LOGIN</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            background-image: url('gradient.jpg');
+           
+            background-size: cover;
+            height: 85vh;
+            background-position: center;
+                   
+            background-repeat: no-repeat;
+            
+        }
+        .loginform{
+           width: 30%;
+           height: 50%;
+            
+            background-color: whitesmoke;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15vh;
+            padding: 2vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+           border: 2px solid;
+            
+        }
+        .create{
+            font-size: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section{
+            margin: 2vh;
+            display: flex;
+            justify-content: space-between;
+        }
+        .line{
+            margin-top: 2vh;
+            width: 40%;
+            height: 1px;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+        .labelfi{
+            margin-bottom: 1vh;
+        }
+        .subfi{
+            width: 100%;
+            height: 5vh;
+            margin-left: auto;
+            margin-right: auto;
+            color: whitesmoke;
+           background-image: url('gradient.jpg');
+           border-radius: 5px;
+
+        }
+        
+        .labelfi{
+           font-family: Arial, Helvetica, sans-serif;
+           font-style: normal;
+        }
+        .inpfi{
+            height: 5vh;
+            border-radius: 5px;
+        }
+        
+        .regclass{
+            background-color: rgb(29, 29, 47);
+            width: 30%;
+            text-align: center;
+            
+        }
+        .regli{
+            color: purple;
+            text-decoration: none;
+            font-size: 1.5rem;
+            
+        }
+        .registerclass{
+            margin-top: 2vh;
+        }
+        .para{
+            margin-top: 2vh;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        a{
+            color: purple;
+            text-decoration: none;
+        }
+        @media screen and (max-width:900px) {
+            .loginform{
+                width: 60%;
+                padding: 2vw;
+                font-size:.8rem;
+            }
+            .regli{
+                font-size: 1rem;
+            }
+            p{
+                font-size: .8rem;
+            }
+            .line{
+                margin-top: .5vh;
+                width: 40%;
+                height: .5px;
+            }
+        }
+        @media screen and (max-width:500px) {
+            .loginform{
+                width: 80%;
+                padding: 2vw;
+                font-size:.6rem;
+            }
+            .regli{
+                font-size: 1rem;
+            }
+            p{
+                font-size: .6rem;
+            }
+            .line{
+                margin-top: .5vh;
+                width: 40%;
+                height: .5px;
+            }
+            .inpfi{
+            height: 4vh;
+            border-radius: 5px;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <form name="form" action="out.php" class="loginform" method="post">    
+        
+        
+        
+        
+        <label for="name" class="labelfi">Username:</label>
+
+        <ion-icon name="mail-outline"></ion-icon>
+
+        <input  type="text" id="user" name="user" class="inpfi" placeholder="name"  required maxlength="15" class="field" ><br>
+        
+        
+        <label for="password" class="labelfi">Password: </label>
+
+        <input  type="password" id="pass" name="pass" placeholder="password" class="inpfi"  minlength="6" class="field"> <br>
+        
+        <input type="submit" value="login" id="btn" name="submit" class="subfi">
+        
+        
+    </form>
+</body>
+</html>

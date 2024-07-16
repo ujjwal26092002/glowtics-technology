@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-image: url(gradient2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover; */
+            background: linear-gradient(to right ,rgb(229, 252, 248),rgb(237, 186, 237));
+            
+        }
+        .container{
+            display: flex;
+            
+            width: 100%;
+            height: 100vh;
+        }
+        .msg{
+            width: 50%;
+            
+            
+            
+        }
+        .content{
+            width: 50%;
+            
+        }
+        form {
+
+            background-color: #ffffff;
+            padding: 1vh;
+            /* border-radius: 10px; */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 2vh;
+            text-align: center;
+            font-style: normal;
+            font-family: 'Times New Roman', Times, serif;
+            color: purple;
+           
+        }
+
+        h2 {
+            color: purple;
+            margin-bottom: 1vh;
+        }
+
+        label {
+            display: block;
+            margin: 1vh;
+            color: purple;
+            
+            font-size: 14px;
+        }
+
+        input, select, textarea {
+            width: calc(100% - 24px);
+            padding: 1vh;
+            margin-bottom: 1vh;
+            box-sizing: border-box;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        select[multiple] {
+            height: 10vh;
+        }
+
+        input[type="submit"] {
+            background-image: url(gradient.jpg);
+            color: #fff;
+            padding: 1vh;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+        @media only screen and (max-width: 600px) {
+            form {
+                max-width: 100%;
+            }
+        }
+
+
+        /* content */   
+        .para{
+           background-color: white;
+            border: 2px solid;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2vh;
+            margin-top: 2vh;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: italic;
+            text-transform: capitalize;
+            font-size: 1.5rem;
+            color: purple;
+            box-shadow: 2px 2px 2px purple;
+        }
+        a{
+            text-decoration: none;
+            color: purple;
+
+        }
+        a:hover{
+           
+            box-shadow: 0 0 10px 5px rgba(78, 142, 165, 0.8);
+        }
+        .note{
+            font-size: 1rem;
+            font-style: normal;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .title{
+            text-align: center;
+            font-style: normal;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .contactdetail{
+            font-style: normal;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5rem;
+        }
+        @media screen and (max-width:1000px) {
+            .content{
+                width: 50%
+            }
+            .msg{
+                width: 50%
+            }
+            
+            .para{
+                width: 70%;
+                font-size: 1.4rem;
+            }
+            .note{
+                font-size: .9rem;
+            }
+        }
+        @media screen and (max-width:700px) {
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+            .msg{
+                margin-top: 10vh;
+                margin-right: auto;
+                margin-left: auto;
+                width: 80%;
+                
+                
+            }
+            .content{
+                margin-right: auto;
+                margin-left: auto;
+                width: 80%;
+                
+            }
+            .para{
+                width: 80%;
+            }
+            form{
+                width: 80%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .contactdetail{
+            
+            font-size: 1rem;
+        }
+        #options{
+            font-size: .8rem;
+        }
+            
+        }
+    </style>
+    <script>
+        function validatePhoneNumber() {
+            var phoneNumberInput = document.getElementById('phone');
+            var phoneNumber = phoneNumberInput.value;
+
+            // Use a regular expression to check for 10 digits
+            var phoneRegex = /^\d{10}$/;
+
+            if (!phoneRegex.test(phoneNumber)) {
+                alert("Please enter a valid 10-digit phone number");
+                phoneNumberInput.focus();
+                return false;
+            }
+
+            return true;
+        }
+
+        function validateForm() {
+            return validatePhoneNumber();
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="para">
+             <div class="title">
+
+              Contact us 
+            </div> <br><br>
+            <div class="contactdetail">
+                Phone number: <br>  <a href="tel:6354789636"><i class="fa-solid fa-phone"></i>    +91 6354789636</a> or <a href="tel:9228262343"> 9228262343</a> <br><br>
+                email: <br> <a href="mailto:us39013@gmail.com"><i class="fa-solid fa-envelope"></i>     us39013@gmail.com</a><br><br>
+                social media:<br> <a href=""></a> <i class="fa-brands fa-square-instagram"></i>  glowtic_technology<br><br>
+                location:<br> <i class="fa-solid fa-location-dot"></i>  635 swc hub, near bright day school, vasna bhayli, vadodara, gujarat.<br><br>
+            </div>
+            <div class="note">
+                NOTE:<br>
+                If you're in the area, we'd love to meet you in person. Please visit our office at the address mentioned above during office hours.<br>
+                Else you can fill the form instead,our team will respond within 24 hours.<br>
+                Connect with us on social media for the latest updates, promotions, and community interaction.<br><br>
+                <br>
+                Thank you for choosing GLOWTICS TECHNOLOGY PVT LMT. We appreciate your trust and look forward to serving you!
+            </div>
+            
+
+
+        </div>
+
+    </div>
+    
+    <div class="msg">
+        <form action="process_form.php" method="post" onsubmit="return validateForm()">
+        <h2>CONTACT US</h2>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="\d{10}" title="Please enter a 10-digit phone number" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="options">select from option(use ctrl for multiple select)</label>
+        <select id="options" name="options[]" multiple size="5">
+            <option value="GST">GST</option>
+            <option value="INCOME TAX">INCOME TAX</option>
+            <option value="INSURANCE">INSURANCE</option>
+            <option value="LICENSE">LICENSE</option>
+            <option value="TAX PLANNING">TAX PLANNING</option>
+            <option value="INVESTMENT PLANNING">INVESTMENT PLANNING</option>
+            <option value="FINTECH">FINTECH</option>
+            <option value="TRAVEL">TRAVEL</option>
+        </select>
+
+        <label for="feedback">Note:</label>
+        <textarea id="feedback" name="feedback" rows="4" ></textarea>
+
+        <input type="submit" value="Submit">
+        </form>
+
+    </div>   
+</div>
+</body>
+</html>
